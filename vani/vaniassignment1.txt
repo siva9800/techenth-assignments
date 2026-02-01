@@ -1,0 +1,29 @@
+mkdir folder name
+git commands:
+ 
+mkdir "dic name"
+git init
+git add " "
+git commit -m " "
+git status
+git config user.name "your name"
+git config user.email "your email"
+git config --list
+vim file name
+touch file name
+git clone <"remote URL">
+git remote add origin <" ">
+git log --oneline
+git remote -v
+git push -u origin main
+git branch
+git checkout
+git merge
+git push
+git diff
+git pull origin main
+git fetch origin main
+git checkout -b <branch_name>
+git merge
+git re-base
+git orgin main
