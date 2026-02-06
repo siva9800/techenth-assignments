@@ -1,0 +1,14 @@
+Rebase Demo flow:
+-->created new repo--clone the repo 
+-->created 2 files in main branch -file-1,file-2.
+-->commit-->push to main branch.
+-->Add new feature branch i.e,develop
+-->create one file-file-3 and then commit it and push it to develop branch.
+-->now again create one file in main branch -file-4.
+-->commit it and push it to main branch. Now main branch commit flow is file-1-->file-2-->file-3
+-->but the develop branch flow is file-1-->file2-->file4.
+-->Now rebase the develop branch with main branch (git rebase main -this command needs to run in your develop branch )
+-->now check the flow in develop branch file1-file2-file4-file3(rebase changes the commit order but merge keeps the commit flow file1-file2-file3-file4)
+-->now if we want to try to push the code in develop branch it throws error,
+then we need to run command git push --force-with-lease origin develop.
+-->once it is done raise PR and merge it to main branch and observe the commit flow of rebase.
