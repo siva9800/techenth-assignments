@@ -1,0 +1,35 @@
+Deploying application with docker (Docker approach) 
+==================================================================== 
+By using git bash i have clone the repository by using git clone repo id. 
+In root folder i have create a docker file (Dockerfile) in docker file place the below 
+FROM node:24-alpine 
+WORKDIR /app 
+COPY package*.json ./ RUN 
+npm install 
+COPY . . 
+EXPOSE 3000 
+CMD ["npm", "start"] 
+
+we have to place the code to docker file, we need to build a docker image 
+docker build -t react-app . 
+
+it will create a docker image verify that image (in that image i can see react-app) 
+docker images
+ 
+Next we need to run the react container 
+docker build -t react-app .
+ 
+react app is running in docker container 
+docker ps
+ 
+Access the reat app in app browser 
+http://localhost:3000 
+
+To change port and run 
+docker run -d -p 8000:3000 react-app
+
+we have to push react image to docker hub  
+we need to login to docker hub and authenticate it after push image to docker hub 
+
+after that login to docker hub 
+we see repository created and image uploaded.
