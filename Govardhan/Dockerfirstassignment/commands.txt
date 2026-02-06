@@ -1,0 +1,31 @@
+1. Install Docker
+sudo apt update -y
+sudo apt install docker.io -y
+
+2. Add ubuntu user to docker group
+sudo usermod -aG docker ubuntu
+
+3. Check Docker status
+sudo systemctl status docker
+docker --version
+
+4. Pull nginx image
+docker pull nginx
+
+5. List docker images
+docker images
+
+6. Run nginx container
+docker run -d -p nginx
+
+7. Check running containers
+docker ps
+
+8. Stop container
+docker stop <container_id>
+
+9. Remove container
+docker rm <container_id>
+
+10. Remove docker image
+docker rmi <image_id>
