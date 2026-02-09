@@ -1,0 +1,11 @@
+Merge concept flow:
+1.First create one Repo in git hub.Then clone that repo code in local.
+2.create one python file(feature-a.py)-->git add feature-a.py
+3.then git commit 
+4.git push to main
+5.again add 2nd file and follow same process.Now we have 2 files in main branch.
+6.create new feature branch and add file to it (feature-c-subbranch.py)
+7.do git add,commit,push to subbranch.
+8.do the same process to create 2nd file in sub branch or feature branch.
+9.create PR and merge the changes to main branch.
+10.now able to see commit flow like feature-a(main)-b(main)-c(featurebranch)-d(featurebranch)-merge commit.
