@@ -1,0 +1,6 @@
+Merge Conflict Demo Flow:
+-->create one feature branch(develop) from main.make change in the file1.and commit it
+-->create another branch (develop-a) from main.make change and commit it in the same file file1.
+-->now push the change in develop branch to main and merge it to main.
+-->now push the change in the develop-a and raise PR to main and try to merge it to main.then you will get conflict message.
+Because main file1-->develop branch make change and pushed it to main.so in main branch file1 becomes changed but develop-a has main version as file1 and made change but it does not have the change what develop has done.this is called 3 way merge.we need to manually figure it out. 
