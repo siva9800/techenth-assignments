@@ -41,6 +41,7 @@
    docker tag frontendappv1 username/frontendappv1:1
    docker push username/frontendappv1:1
  15.stopped and deleted tags, images and conatiners
+ 
 
 
   
