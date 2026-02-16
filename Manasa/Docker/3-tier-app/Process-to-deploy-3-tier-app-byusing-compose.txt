@@ -1,0 +1,27 @@
+1.first,i have created one folder and then created one main.tf file.Then write a terraform code for spin up a EC2 instance.(it asks for the key name. we need to provide the key name present in the same region)
+2.After terraform init, We need to run the aws credentials(access key and secret key) in the terminal.Then terraform plan and terraform apply.EC2 instance is created successfully.
+3.I have created the key as pem file but we need to convert ppk file while trying to open ec2 instance through putty.for this open puttygen and load the pem file and saveas ppk file.
+4.Now open putty by using public ip and give the ppk file and open it.now give the login as "ubuntu"(for ubuntu ,for amazon Linux - ec2-user). --public_ip = "52.66.206.39" save the ip in terraform terminal.
+5.now run the below commands to install docker in ec2
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+docker --version
+
+6.Install docker Impose
+sudo apt install docker-compose -y
+docker-compose --version
+7.to get project run below commands
+sudo apt install git -y
+git clone https://github.com/<your-org-or-user>/learn-docker.git
+cd learn-docker/day9/project
+8.deploy the 3-tier application
+sudo docker-compose up -d
+9.now verify the process 
+sudo docker ps
+10.now open browser and run the http://public.ip url.(when we stop instance in aws, we should start our docker containers processes then only application will run. Every time public Ip is changed)
+
+
+

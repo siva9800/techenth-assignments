@@ -1,0 +1,35 @@
+========Process to deploy python application manually========
+
+1.Install python from browser(AMD for windows).
+2.Now check the python version --> python --version
+3.Now we need to create a virtual environment(isolated env to manage dependencies to avoid version conflicts)
+4.python -m venv abc(virtual env name as per our wish)
+5.we need to activate the virtual env -->source abc/bin/activate
+6.Now open day 4 folder and land to python-backend folder in terminal.
+7.Now install dependencies -->pip install -r requirement.txt(in this file dependencies are present-fastapi, uvicorn)
+8.Now run the uvicorn main app --> uvicorn main:app --reload (uvicorn is python webserver ,main -->app is the python application)
+
+========Deploy Python app by using Docker file==========
+
+1.need to create docker file with below content
+FROM python:3.11-slim
+WORKDIR /app
+COPY . .
+RUN pip install -r requirements.txt
+EXPOSE 8000
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+2.Now build the docker file
+ docker build -t py-be(imagename) .(. means current directory)
+
+3.now docker image is created.-->docker images
+
+4.docker run --name backendserver -d -p 80:8000 py-be (here if we give container name it will create the container with that name otherwise it gives random name)
+
+5.to enter into container  -->docker exec -it backendserver /bin/bash
+6.now run the localhost ..>application text will be visible.
+
+========Container concept=========
+1.To enter into container  -->docker exec -it backendserver /bin/bash
+2.if we create any file in the container it will stay until the container is up.once we stop and removed the container then the files which we have created it wont appear.
+Due to this reason we use volumes to store files.
